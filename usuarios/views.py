@@ -68,3 +68,8 @@ def cadastro(request):
 
 
     return render(request, 'usuarios/cadastro.html', {'form':form})
+
+def logout(request):
+    messages.warning(request,'Logout realizado com sucesso')
+    auth.logout(request)
+    return redirect('home')

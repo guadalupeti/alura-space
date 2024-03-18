@@ -1,0 +1,8 @@
+
+{% if messages %}
+{% for error in form.nome_cadastro.errors %}
+<div class="alert alert-danger">
+    {{error}}
+ </div>
+{% endfor %}
+{% endif %}
