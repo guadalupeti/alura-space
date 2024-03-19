@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.csrf'
+                'django.template.context_processors.csrf',
             ],
         },
     },
@@ -136,3 +136,12 @@ MEDIA_URL = "/media/"
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#messages
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+        messages.ERROR: 'alert-error',
+        messages.SUCCESS: 'alert-success'
+    }
